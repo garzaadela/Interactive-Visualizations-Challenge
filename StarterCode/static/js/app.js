@@ -1,3 +1,3 @@
-sample_data = d3.json("samples.json").then((input)=>{
-    console.log(input);
+d3.json("samples.json").then((data)=>{
+    console.log(data);
 });
