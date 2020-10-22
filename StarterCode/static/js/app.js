@@ -7,6 +7,9 @@ d3.json("samples.json").then((data)=>{
     });
 });
 
+function optionChanged(input) {
+    console.log(input)
+}
 
 dropDownData = 947
 
