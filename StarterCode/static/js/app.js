@@ -44,7 +44,8 @@ function filterPlotData(dropDownData) {
             colorscale: 'Hot',
             text: filteredData[0].otu_labels,
             color: filteredData[0].otu_ids,
-            size: filteredData[0].sample_values
+            size: filteredData[0].sample_values,
+            
         }
     };
 
@@ -52,7 +53,9 @@ function filterPlotData(dropDownData) {
 
     let layout = {
         title: 'Sample Values vs OTU IDs',
-        
+        xaxis: {
+            title: "OTU ID"
+        }
     };
 
     Plotly.newPlot('bubble', bubbleData, layout);
