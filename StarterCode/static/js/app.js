@@ -41,6 +41,8 @@ function filterPlotData(dropDownData) {
         y: filteredData[0].sample_values,
         mode: 'markers',
         marker: {
+            colorscale: 'Hot',
+            text: filteredData[0].otu_labels,
             color: filteredData[0].otu_ids,
             size: filteredData[0].sample_values
         }
@@ -50,9 +52,7 @@ function filterPlotData(dropDownData) {
 
     let layout = {
         title: 'Sample Values vs OTU IDs',
-        showlegend: false,
-        height: 600,
-        width: 600
+        
     };
 
     Plotly.newPlot('bubble', bubbleData, layout);
